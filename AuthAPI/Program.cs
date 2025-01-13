@@ -13,6 +13,7 @@ namespace AuthAPI
             builder.Services.AddDbContext<AppDBContext>();
 
             builder.Services.AddScoped<IAuth, AuthService>();
+            builder.Services.AddScoped<ITokenGenerator ,TokenGenerator>();
             // Add services to the container.
 
             builder.Services.AddControllers();
